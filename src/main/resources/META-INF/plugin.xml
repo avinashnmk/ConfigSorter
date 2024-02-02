@@ -8,15 +8,20 @@
     <name>ConfigSorter</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="avinash.kandaswamyt@target.com" url="https://github.com/avinashnmk">Avinash Kandaswamy</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-  ]]></description>
+        ConfigSorter is an IntelliJ plugin that allows you to alphabetically sort keys in *conf configuration files.<br>
+        Simply select the configuration text, trigger the action, and enjoy organized configurations.<br>
+        <strong>Features:</strong>
+        <ul>
+            <li>Alphabetically sorts keys in configuration files.</li>
+            <!-- Add more features if needed -->
+        </ul>
+    ]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -27,4 +32,14 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+
+    <!-- Define the action for sorting configuration keys -->
+    <actions>
+        <action id="SortConfigKeysAction" class="com.target.fm.SortConfigKeyAction" text="Sort Configuration Keys"
+                description="Alphabetically sorts keys in the configuration file.">
+            <keyboard-shortcut first-keystroke="alt shift l" keymap="$default"/>
+            <add-to-group group-id="EditMenu" anchor="last"/>
+        </action>
+    </actions>
+
 </idea-plugin>

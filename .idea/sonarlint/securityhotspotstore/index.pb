@@ -1,5 +1,16 @@
 
-n
->src/main/kotlin/com/target/configsorter/SortConfigKeyAction.kt,2/d/2dd314259b9f2955b6b5f4bdbe0b2f3cc37243c3
 @
 build.gradle.kts,d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d
+d
+4src/main/kotlin/com/target/fm/SortConfigKeyAction.kt,6/c/6c0d298c5a73c22179680f88a8678556bcb80de1
+Z
+*src/main/kotlin/com/target/fm/SortBlock.kt,3/2/3268a059783e9d021e9acbc560e8cca5a4f41629
+[
++src/main/kotlin/com/target/fm/SortAction.kt,4/1/415c578b52c59072f6407984326e27b482f708b0
+h
+8src/main/kotlin/com/target/fm/SortConfigKeyActionTest.kt,f/c/fc97b004781d0107b204f401f84aebbafd42e63d
+C
+settings.gradle.kts,7/4/749edfcc96398253e5b3416184e95c46621da850
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
