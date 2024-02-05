@@ -5,8 +5,6 @@ d
 4src/main/kotlin/com/target/fm/SortConfigKeyAction.kt,6/c/6c0d298c5a73c22179680f88a8678556bcb80de1
 Z
 *src/main/kotlin/com/target/fm/SortBlock.kt,3/2/3268a059783e9d021e9acbc560e8cca5a4f41629
-[
-+src/main/kotlin/com/target/fm/SortAction.kt,4/1/415c578b52c59072f6407984326e27b482f708b0
 h
 8src/main/kotlin/com/target/fm/SortConfigKeyActionTest.kt,f/c/fc97b004781d0107b204f401f84aebbafd42e63d
 C

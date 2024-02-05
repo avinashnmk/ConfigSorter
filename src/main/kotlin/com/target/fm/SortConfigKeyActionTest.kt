@@ -9,7 +9,7 @@ class SortConfigKeyActionTest {
 
     @Test
     fun testSortConfigBlocks() {
-        val inputConfig = getResourceFileContent("before.conf")
+        val inputConfig = getResourceFileContent("before2.conf")
         val expectedSortedConfig = getResourceFileContent("after.conf")
         val result = sortConfigBlocks(inputConfig)
         println(result)
