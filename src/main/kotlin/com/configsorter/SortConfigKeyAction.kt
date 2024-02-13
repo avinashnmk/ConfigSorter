@@ -1,4 +1,4 @@
-package com.target.fm
+package com.configsorter
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

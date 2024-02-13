@@ -1,4 +1,4 @@
-package com.target.fm
+package com.configsorter
 
 import java.util.Stack
 
@@ -15,30 +15,33 @@ fun extractConfigBlocks(config: String): List<String> {
     for (i in config.indices) {
         when (config[i]) {
             '{' -> {
-                key = config.substring(keyStart, i).trim()
-                stack.add(key)
+                stack.add(config.substring(keyStart, i).trim())
                 stack.add("{")
                 blockStart = i
                 keyStart = i + 1
             }
             '}' -> {
-                val lines = config.substring(blockStart + 1, i).trim().lines()
-                val sortedValues = lines.map { it.trim() }.sorted().joinToString("\n\t", "\n\t", "\n")
-                val string = mutableListOf(sortedValues)
+                val strings = mutableListOf<String>()
 
                 while (stack.isNotEmpty()) {
                     val v = stack.pop()
                     if (v == "{") {
                         key = stack.pop()
-                        stack.add("$key {${string.joinToString(separator = " ")}}\n")
+                        stack.add("$key {${strings.sorted().joinToString(separator = "\n\t", prefix = "\n\t")}\n}\n")
                         break
                     } else {
-                        val s = v.replace("\t", "\t\t").replace("}", "\t}")
-                        string.add("\t" + s)
+                        strings.add(v.replace("\t","\t\t").replace("}\n","\t}"))
                     }
                 }
                 blockStart = i + 1
                 keyStart = i + 1
+            }
+            '\n' -> {
+                if (blockStart + 1 < i) {
+                    stack.add(config.substring(blockStart + 1, i).trim())
+                }
+                blockStart = i
+                keyStart = i
             }
         }
     }

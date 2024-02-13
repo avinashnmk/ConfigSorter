@@ -4,8 +4,8 @@ plugins {
     id("org.jetbrains.intellij") version "1.10.1"
 }
 
-group = "com.target"
-version = "1.1"
+group = "com.configsorter"
+version = "1.3"
 
 repositories {
     mavenCentral()
